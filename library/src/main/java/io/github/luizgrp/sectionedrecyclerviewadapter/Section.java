@@ -342,6 +342,15 @@ public abstract class Section {
     public abstract int getContentItemsTotal();
 
     /**
+     * Return the ViewType for a single item of this Section
+     * @param position position of the Item in the Section, not in the RecyclerView
+     * @return ViewType for the Item
+     */
+    public int getItemViewType(int position) {
+        return -1;
+    }
+
+    /**
      * Creates the View for a single Item. This must be implemented if and only if
      * {@link #isItemViewWillBeProvided()} is true.
      *
@@ -444,8 +453,7 @@ public abstract class Section {
     }
 
     /**
-     * Return the ViewHolder for the Loading state of this Section.
-     *
+     * Return the ViewHolder for the Loading state of this Section
      * @param view View inflated by resource returned by getItemResourceId
      * @return ViewHolder for the Loading state of this Section
      */

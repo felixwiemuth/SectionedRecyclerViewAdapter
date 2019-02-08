@@ -16,6 +16,7 @@
     <string name="nav_stateful">Stateful Section</string>
     <string name="nav_example3">Section with Header and Footer</string>
     <string name="nav_example8">Animations</string>
+    <string name="nav_example9">Multiple Item ViewHolders</string>
 
     <string name="cd_app_icon">App icon</string>
     <string name="cd_android_icon">Android icon</string>
