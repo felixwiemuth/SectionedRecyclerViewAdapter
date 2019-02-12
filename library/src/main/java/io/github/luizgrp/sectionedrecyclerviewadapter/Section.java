@@ -453,7 +453,8 @@ public abstract class Section {
     }
 
     /**
-     * Return the ViewHolder for the Loading state of this Section
+     * Return the ViewHolder for the Loading state of this Section.
+     *
      * @param view View inflated by resource returned by getItemResourceId
      * @return ViewHolder for the Loading state of this Section
      */
