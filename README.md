@@ -2,8 +2,10 @@
 
 An Adapter that allows a RecyclerView to be split into Sections with headers and/or footers.
 
-[![Build Status](https://travis-ci.org/luizgrp/SectionedRecyclerViewAdapter.svg?branch=master)](https://travis-ci.org/luizgrp/SectionedRecyclerViewAdapter)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SectionedRecyclerViewAdapter-green.svg?style=true)](https://android-arsenal.com/details/1/3471)
+This fork incorporates the feature of multiple item view types as implemented by [percula](https://github.com/percula/SectionedRecyclerViewAdapter) (see branch feature/multipleItemViewTypes). For a discussion, see [#9](https://github.com/luizgrp/SectionedRecyclerViewAdapter/issues/9) in the main repository.
+Note that this feature is not properly tested, please test yourself.
+I might incorporate upstream changes (updates in the main repository) but there is no guarantee this fork will stay up-to-date.
+
 
 <img src="https://raw.githubusercontent.com/luizgrp/SectionedRecyclerViewAdapter/master/art/sc1.png" width="300" height="533" >
 <img src="https://raw.githubusercontent.com/luizgrp/SectionedRecyclerViewAdapter/master/art/sc4.png" width="300" height="533" >
@@ -16,13 +18,24 @@ In addition, each Section can have its state(Loading/Loaded/Failed/Empty) contro
 
 ---
 
-## Gradle Dependency
+## Adding the library to your project
+In contrast to the main project, there is no gradle depedency for this fork.
+Instead add a git submodule:
 
-Add this to the `dependencies` section in your project-level **build.gradle** file:
+1. In your repository's root, execute `git submodule add -b feature/multipleItemViewTypes https://github.com/felixwiemuth/SectionedRecyclerViewAdapter`
 
-```groovy
-compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
-```
+2. Your `settings.gradle` should include
+
+    ``` gradle
+    include ':app', ':sectionedrecyclerviewadapter'
+    project(':sectionedrecyclerviewadapter').projectDir = new File('SectionedRecyclerViewAdapter/library')
+    ```
+    
+3. Add the project as a depedency in your module's `build.gradle`:
+
+    ``` gradle
+    implementation project(':sectionedrecyclerviewadapter')
+    ```
 
 ## Basic usage
 
@@ -108,11 +121,12 @@ Stateless Section
 - [Expandable Grid Section](app/src/main/java/io/github/luizgrp/sectionedrecyclerviewadapter/demo/Example6Fragment.java)
 - [SearchView with Sections](app/src/main/java/io/github/luizgrp/sectionedrecyclerviewadapter/demo/Example7Fragment.java)
 - [Animations](app/src/main/java/io/github/luizgrp/sectionedrecyclerviewadapter/demo/Example8Fragment.java)
+- [Multiple item view types](app/src/main/java/io/github/luizgrp/sectionedrecyclerviewadapter/demo/Example9Fragment.java)
 
 Stateful Section
 - [Section with Header and Footer](app/src/main/java/io/github/luizgrp/sectionedrecyclerviewadapter/demo/Example3Fragment.java)
 
-## Apps on Google Play using this library
+## Apps on Google Play using (original version of) this library
 
 - [JStock](https://play.google.com/store/apps/details?id=org.yccheok.jstock.gui)
 - [WeNote](https://play.google.com/store/apps/details?id=com.yocto.wenote)
