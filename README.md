@@ -2,8 +2,7 @@
 
 An Adapter that allows a RecyclerView to be split into Sections with headers and/or footers.
 
-[![Build Status](https://travis-ci.org/luizgrp/SectionedRecyclerViewAdapter.svg?branch=master)](https://travis-ci.org/luizgrp/SectionedRecyclerViewAdapter)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SectionedRecyclerViewAdapter-green.svg?style=true)](https://android-arsenal.com/details/1/3471)
+This fork incorporates the feature of multiple item view types as implemented by [percula](https://github.com/percula/SectionedRecyclerViewAdapter) (see branch [feature/multipleItemViewTypes](https://github.com/felixwiemuth/SectionedRecyclerViewAdapter/tree/feature/multipleItemViewTypes)). For a discussion, see [#9](https://github.com/luizgrp/SectionedRecyclerViewAdapter/issues/9) in the main repository.
 
 <img src="https://raw.githubusercontent.com/luizgrp/SectionedRecyclerViewAdapter/master/art/sc1.png" width="300" height="533" >
 <img src="https://raw.githubusercontent.com/luizgrp/SectionedRecyclerViewAdapter/master/art/sc4.png" width="300" height="533" >
